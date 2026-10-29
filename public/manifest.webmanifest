@@ -1,0 +1,27 @@
+{
+  "id": "/",
+  "name": "LiquidCalc Multi Calculator",
+  "short_name": "LiquidCalc",
+  "description": "iOS Liquid Glass Multi Calculator with 22+ financial, scientific, and conversion tools.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0a0f1d",
+  "theme_color": "#0a0f1d",
+  "categories": ["utilities", "productivity", "finance"],
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

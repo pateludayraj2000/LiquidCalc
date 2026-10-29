@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --accent-primary: #38bdf8;
+    --accent-gradient-from: #38bdf8;
+    --accent-gradient-to: #2563eb;
+    --accent-glow: rgba(56, 189, 248, 0.25);
+    --glass-bg: rgba(15, 23, 42, 0.65);
+    --glass-border: rgba(255, 255, 255, 0.12);
+    --glass-specular: rgba(255, 255, 255, 0.25);
+    --glass-blur: 24px;
+    --bg-base: #060913;
+  }
+
+  [data-theme="light"] {
+    --accent-primary: #0284c7;
+    --accent-gradient-from: #0284c7;
+    --accent-gradient-to: #1d4ed8;
+    --accent-glow: rgba(2, 132, 199, 0.2);
+    --glass-bg: rgba(255, 255, 255, 0.7);
+    --glass-border: rgba(255, 255, 255, 0.7);
+    --glass-specular: rgba(255, 255, 255, 0.9);
+    --glass-blur: 24px;
+    --bg-base: #f1f5f9;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-base);
+    color-scheme: dark light;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  input, textarea {
+    user-select: text;
+    -webkit-user-select: text;
+  }
+}
+
+/* iOS Liquid Glass Card styles */
+.liquid-glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(180%);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 10px 32px 0 rgba(0, 0, 0, 0.25), inset 0 1px 1px 0 var(--glass-specular);
+  position: relative;
+}
+
+.liquid-glass-subtle {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="light"] .liquid-glass-subtle {
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Glass interactive button */
+.glass-btn {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 1px 0 0 rgba(255, 255, 255, 0.2), 0 4px 12px 0 rgba(0, 0, 0, 0.15);
+  transition: transform 0.12s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.12s, box-shadow 0.12s;
+}
+
+.glass-btn:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.22);
+}
+
+.glass-btn:active {
+  transform: scale(0.96);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Accent glass button */
+.glass-btn-accent {
+  background: linear-gradient(135deg, var(--accent-gradient-from), var(--accent-gradient-to));
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.4), 0 4px 16px 0 var(--accent-glow);
+  color: #ffffff;
+  transition: transform 0.12s cubic-bezier(0.16, 1, 0.3, 1), filter 0.12s, box-shadow 0.12s;
+}
+
+.glass-btn-accent:hover {
+  filter: brightness(1.1);
+  box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.5), 0 6px 20px 0 var(--accent-glow);
+}
+
+.glass-btn-accent:active {
+  transform: scale(0.96);
+  filter: brightness(0.92);
+}
+
+/* Specular sheen effect on top of cards */
+.specular-rim {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  pointer-events: none;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Safe area padding */
+.pb-safe {
+  padding-bottom: max(1rem, env(safe-area-inset-bottom, 1rem));
+}
+.pt-safe {
+  padding-top: max(0.5rem, env(safe-area-inset-top, 0.5rem));
+}
+
+/* Tabular nums */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}

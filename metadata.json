@@ -1,0 +1,6 @@
+{
+  "name": "LiquidCalc - iOS Glass Multi Calculator",
+  "description": "Premium iOS liquid glass multi-calculator with 22+ financial, scientific, and conversion tools, offline PWA, and local privacy.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

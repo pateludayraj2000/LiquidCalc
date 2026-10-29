@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="40%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#020617" />
+    </linearGradient>
+
+    <!-- Liquid Glass Surface Gradient -->
+    <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35" />
+      <stop offset="30%" stop-color="#6366f1" stop-opacity="0.25" />
+      <stop offset="70%" stop-color="#ec4899" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0.3" />
+    </linearGradient>
+
+    <!-- Specular Highlight Top Gradient -->
+    <linearGradient id="specularGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.6" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Accent Button Gradient -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0ea5e9" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Base Rounded Squircle -->
+  <rect width="512" height="512" rx="115" fill="url(#bgGrad)" />
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="160" cy="140" r="140" fill="#38bdf8" opacity="0.25" filter="url(#softGlow)" />
+  <circle cx="360" cy="360" r="150" fill="#a855f7" opacity="0.2" filter="url(#softGlow)" />
+
+  <!-- Main Glass Body Card -->
+  <rect x="56" y="56" width="400" height="400" rx="90" fill="url(#glassGrad)" stroke="rgba(255, 255, 255, 0.35)" stroke-width="2.5" />
+  
+  <!-- Top Specular Rim Reflection -->
+  <path d="M 146 58 Q 256 56 366 58" stroke="url(#specularGrad)" stroke-width="3" fill="none" stroke-linecap="round" />
+
+  <!-- Calculator Screen Notch Display -->
+  <rect x="96" y="96" width="320" height="90" rx="28" fill="rgba(0, 0, 0, 0.45)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" />
+  <circle cx="126" cy="141" r="5" fill="#38bdf8" />
+  <circle cx="146" cy="141" r="5" fill="#a855f7" />
+  <text x="386" y="152" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-weight="700" font-size="38" text-anchor="end">42.85</text>
+
+  <!-- Button Grid -->
+  <!-- Row 1 -->
+  <rect x="96" y="212" width="68" height="68" rx="22" fill="rgba(255, 255, 255, 0.12)" stroke="rgba(255, 255, 255, 0.2)" stroke-width="1.5" />
+  <text x="130" y="255" fill="#cbd5e1" font-family="-apple-system, sans-serif" font-weight="600" font-size="28" text-anchor="middle">C</text>
+
+  <rect x="180" y="212" width="68" height="68" rx="22" fill="rgba(255, 255, 255, 0.12)" stroke="rgba(255, 255, 255, 0.2)" stroke-width="1.5" />
+  <text x="214" y="254" fill="#cbd5e1" font-family="-apple-system, sans-serif" font-weight="600" font-size="26" text-anchor="middle">±</text>
+
+  <rect x="264" y="212" width="68" height="68" rx="22" fill="rgba(255, 255, 255, 0.12)" stroke="rgba(255, 255, 255, 0.2)" stroke-width="1.5" />
+  <text x="298" y="254" fill="#cbd5e1" font-family="-apple-system, sans-serif" font-weight="600" font-size="24" text-anchor="middle">%</text>
+
+  <rect x="348" y="212" width="68" height="68" rx="22" fill="url(#accentGrad)" stroke="rgba(255, 255, 255, 0.35)" stroke-width="1.5" />
+  <text x="382" y="255" fill="#ffffff" font-family="-apple-system, sans-serif" font-weight="700" font-size="28" text-anchor="middle">÷</text>
+
+  <!-- Row 2 -->
+  <rect x="96" y="296" width="68" height="68" rx="22" fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" />
+  <text x="130" y="340" fill="#f8fafc" font-family="-apple-system, sans-serif" font-weight="600" font-size="28" text-anchor="middle">7</text>
+
+  <rect x="180" y="296" width="68" height="68" rx="22" fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" />
+  <text x="214" y="340" fill="#f8fafc" font-family="-apple-system, sans-serif" font-weight="600" font-size="28" text-anchor="middle">8</text>
+
+  <rect x="264" y="296" width="68" height="68" rx="22" fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" />
+  <text x="298" y="340" fill="#f8fafc" font-family="-apple-system, sans-serif" font-weight="600" font-size="28" text-anchor="middle">9</text>
+
+  <rect x="348" y="296" width="68" height="68" rx="22" fill="url(#accentGrad)" stroke="rgba(255, 255, 255, 0.35)" stroke-width="1.5" />
+  <text x="382" y="341" fill="#ffffff" font-family="-apple-system, sans-serif" font-weight="700" font-size="26" text-anchor="middle">×</text>
+
+  <!-- Row 3 Special Pill Equals Button -->
+  <rect x="96" y="380" width="152" height="52" rx="22" fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" />
+  <text x="172" y="415" fill="#f8fafc" font-family="-apple-system, sans-serif" font-weight="600" font-size="24" text-anchor="middle">0</text>
+
+  <rect x="264" y="380" width="68" height="52" rx="22" fill="rgba(255, 255, 255, 0.08)" stroke="rgba(255, 255, 255, 0.15)" stroke-width="1.5" />
+  <text x="298" y="415" fill="#f8fafc" font-family="-apple-system, sans-serif" font-weight="600" font-size="28" text-anchor="middle">.</text>
+
+  <rect x="348" y="380" width="68" height="52" rx="22" fill="url(#accentGrad)" stroke="rgba(255, 255, 255, 0.4)" stroke-width="1.5" />
+  <text x="382" y="415" fill="#ffffff" font-family="-apple-system, sans-serif" font-weight="700" font-size="28" text-anchor="middle">=</text>
+</svg>
